@@ -12,7 +12,7 @@ type EmptyStateProps = {
 
 export function EmptyState({
   title = 'Nothing published here yet',
-  description = 'Fresh posts will appear here automatically once this section has published content.',
+  description = 'Fresh listings will appear here automatically once this section has published business content.',
   actionLabel = 'Back to home',
   actionHref = '/',
   className,
@@ -32,12 +32,12 @@ export function EmptyState({
   )
 }
 
-export function TaskEmptyState({ taskLabel = 'posts', className }: { taskLabel?: string; className?: string }) {
+export function TaskEmptyState({ taskLabel = 'listings', className }: { taskLabel?: string; className?: string }) {
   return (
     <EmptyState
       className={className}
       title={`No ${taskLabel} available yet`}
-      description={`Published ${taskLabel} from the master panel will appear here automatically. The page layout stays ready even when the feed is empty.`}
+      description={`Published ${taskLabel} from the master panel will appear here automatically. The directory layout stays ready even when the feed is empty.`}
       actionLabel="Explore the site"
       actionHref="/"
     />
