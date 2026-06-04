@@ -8,11 +8,11 @@ export const globalContent = {
     baseUrl: slot4BrandConfig.baseUrl,
   },
   nav: {
-    tagline: 'Independent reading platform',
+    tagline: slot4BrandConfig.tagline || 'Business listing platform',
     primaryLinks: [
-      { label: 'Articles', href: '/articles' },
-      { label: 'Visuals', href: '/image-sharing' },
-      { label: 'Listings', href: '/listings' },
+      { label: 'Explore', href: '/listing' },
+      { label: 'Search', href: '/search' },
+      { label: 'Create listing', href: '/create' },
       { label: 'Contact', href: '/contact' },
     ],
     actions: {
@@ -21,16 +21,16 @@ export const globalContent = {
     },
   },
   footer: {
-    tagline: 'Stories, resources, and discoverable posts',
-    description: 'A connected publishing surface for articles, visuals, listings, profiles, bookmarks, and downloadable resources.',
+    tagline: 'Local services, business profiles, and trusted discovery',
+    description: 'A focused business directory for finding service providers, comparing profiles, and helping companies become easier to discover.',
     columns: [
       {
         title: 'Explore',
         links: [
-          { label: 'Articles', href: '/articles' },
-          { label: 'Listings', href: '/listings' },
-          { label: 'Images', href: '/image-sharing' },
-          { label: 'PDF Library', href: '/pdf' },
+          { label: 'Business listings', href: '/listing' },
+          { label: 'Search services', href: '/search' },
+          { label: 'Create listing', href: '/create' },
+          { label: 'Contact support', href: '/contact' },
         ],
       },
       {
@@ -41,7 +41,7 @@ export const globalContent = {
         ],
       },
     ],
-    bottomNote: 'Built for clean discovery and connected publishing.',
+    bottomNote: 'Built for clean business discovery and practical listing workflows.',
   },
   commonLabels: {
     readMore: 'Read more',
@@ -49,6 +49,6 @@ export const globalContent = {
     explore: 'Explore',
     latest: 'Latest',
     related: 'Related',
-    published: 'Published',
+    published: 'Listed',
   },
 } as const
