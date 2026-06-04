@@ -6,8 +6,8 @@ const { recipe } = getFactoryState()
 const productKind = getProductKind(recipe)
 
 export const slot4BrandConfig = {
-  siteName: siteIdentity.name,
-  tagline: siteIdentity.tagline,
+  siteName: process.env.NEXT_PUBLIC_SITE_NAME || siteIdentity.name,
+  tagline: process.env.NEXT_PUBLIC_SITE_TAGLINE || siteIdentity.tagline,
   domain: siteIdentity.domain,
   baseUrl: siteIdentity.url,
   productKind,
@@ -18,6 +18,6 @@ export const slot4BrandConfig = {
       : productKind === 'editorial'
         ? { primary: '#241711', surface: '#fbf6ee' }
         : productKind === 'directory'
-          ? { primary: '#0f172a', surface: '#f8fbff' }
+          ? { primary: '#3f6ff2', surface: '#f8fbff' }
           : { primary: '#5b2b3b', surface: '#f7f1ea' },
 } as const
