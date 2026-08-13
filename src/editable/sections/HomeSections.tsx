@@ -95,13 +95,13 @@ export function EditableHomeHero({ primaryTask, primaryRoute, posts }: HomeSecti
           <h1 className="mt-5 text-4xl font-black leading-tight tracking-[-0.04em] text-[#11142f] sm:text-5xl">{heroTitle}</h1>
           <p className="mt-4 text-xl font-black text-[#8f94aa]">Get useful business details within minutes</p>
           <form action="/search" className="mx-auto mt-9 grid max-w-[700px] gap-3 sm:grid-cols-[1fr_210px_124px]">
-            <label className="flex h-14 items-center border border-[#dfe3ee] bg-white px-4 focus-within:border-[#3f6ff2]">
+            <label className="flex h-14 items-center border border-[#eef1f7] bg-white px-4 focus-within:border-[#3f6ff2]">
               <Search className="h-5 w-5 text-[#8f94aa]" />
-              <input name="q" placeholder={pagesContent.home.hero.searchPlaceholder} className="min-w-0 flex-1 bg-transparent px-3 text-sm font-black text-[#11142f] outline-none placeholder:text-[#9aa0b5]" />
+              <input name="q" placeholder={pagesContent.home.hero.searchPlaceholder} className="min-w-0 flex-1 bg-transparent px-3 text-sm font-black text-[#11142f] outline-none placeholder:text-[#8f94aa]" />
             </label>
-            <label className="flex h-14 items-center border border-[#dfe3ee] bg-white px-4 focus-within:border-[#3f6ff2]">
+            <label className="flex h-14 items-center border border-[#eef1f7] bg-white px-4 focus-within:border-[#3f6ff2]">
               <MapPin className="h-5 w-5 text-[#11142f]" />
-              <input name="category" placeholder="Postcode or city" className="min-w-0 flex-1 bg-transparent px-3 text-sm font-black text-[#11142f] outline-none placeholder:text-[#9aa0b5]" />
+              <input name="category" placeholder="Postcode or city" className="min-w-0 flex-1 bg-transparent px-3 text-sm font-black text-[#11142f] outline-none placeholder:text-[#8f94aa]" />
             </label>
             <button className="h-14 rounded-md bg-[#3f6ff2] px-6 text-sm font-black text-white shadow-[0_10px_20px_rgba(63,111,242,0.25)]">Search</button>
           </form>
