@@ -13,7 +13,7 @@ export function EditableNavbar() {
   const pathname = usePathname()
   const { session, logout } = useEditableLocalAuthSession()
   const brandName = globalContent.site.name
-  const navVars = { '--editable-nav-bg': '#ffffff', '--editable-nav-text': '#11142f', '--editable-nav-active': '#eef3ff', '--editable-nav-active-text': '#315fe7', '--editable-cta-bg': '#3f6ff2', '--editable-cta-text': '#ffffff', '--editable-search-bg': '#ffffff', '--editable-border': 'rgba(17,20,47,0.10)', '--editable-container': '1180px', '--editable-page-bg': '#ffffff', '--editable-page-text': '#11142f' } as CSSProperties
+  const navVars = { '--editable-nav-bg': '#ffffff', '--editable-nav-text': '#11142f', '--editable-nav-active': '#e8efff', '--editable-nav-active-text': '#3f6ff2', '--editable-cta-bg': '#3f6ff2', '--editable-cta-text': '#ffffff', '--editable-search-bg': '#ffffff', '--editable-border': 'rgba(17,20,47,0.10)', '--editable-container': '1180px', '--editable-page-bg': '#ffffff', '--editable-page-text': '#11142f' } as CSSProperties
   const navItems = useMemo(
     () => SITE_CONFIG.tasks.filter((task) => task.enabled).map((task) => ({ label: task.label, href: task.route })),
     []
@@ -23,7 +23,8 @@ export function EditableNavbar() {
     <header style={navVars} className="sticky top-0 z-50 border-b border-[var(--editable-border)] bg-[var(--editable-nav-bg)]/95 text-[var(--editable-nav-text)] backdrop-blur-xl">
       <nav className="mx-auto flex min-h-[74px] w-full max-w-[var(--editable-container)] items-center gap-4 px-4 sm:px-6 lg:px-8">
         <Link href="/" className="group flex shrink-0 items-center gap-3">
-          <span className="text-3xl font-black leading-none tracking-[-0.06em] text-[#11142f]">{brandName}</span>
+          <img src="/favicon.png?v=20260413" alt={brandName} className="h-10 w-10 object-contain" />
+          <span className="hidden text-2xl font-black leading-none tracking-[-0.06em] text-[#11142f] sm:block">{brandName}</span>
         </Link>
 
         <form action="/search" className="mx-auto hidden min-w-0 flex-1 justify-center md:flex">
@@ -50,7 +51,7 @@ export function EditableNavbar() {
         <div className="ml-auto flex shrink-0 items-center gap-2">
           {session ? (
             <>
-              <span className="hidden max-w-[180px] items-center gap-2 truncate rounded-full bg-[#f4f6fb] px-3 py-2 text-sm font-black sm:inline-flex"><UserCircle2 className="h-4 w-4 shrink-0 text-[#3f6ff2]" /> {session.name}</span>
+              <span className="hidden max-w-[180px] items-center gap-2 truncate rounded-full bg-[#f7f8fc] px-3 py-2 text-sm font-black sm:inline-flex"><UserCircle2 className="h-4 w-4 shrink-0 text-[#3f6ff2]" /> {session.name}</span>
               <Link href="/create" className="hidden items-center gap-2 rounded-md bg-[var(--editable-cta-bg)] px-4 py-2.5 text-sm font-black text-[var(--editable-cta-text)] shadow-[0_8px_18px_rgba(63,111,242,0.28)] sm:inline-flex"><PlusCircle className="h-4 w-4" /> Create listing</Link>
               <button type="button" onClick={logout} className="hidden items-center gap-2 rounded-md px-3 py-2 text-sm font-black hover:bg-black/5 sm:inline-flex">Logout</button>
             </>
